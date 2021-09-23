@@ -2,10 +2,12 @@
 
 const API_KEY = "8e636ff80b5cd813d55044edab70fd96"; // incase we do not want to share our API key
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500'; // special image URL for this site -> it should be combined with poster_path
+const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 const POPULAR_MOVIES = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}`
 
 // ********* Selecting Elements from DOM  *********************************** //
 const main = document.querySelector('#gallery');
+const searchbar = document.querySelector('#searchbar');
 
 // ********* Homepage view function **************************************** //
 
@@ -21,6 +23,25 @@ function fetchAPI(e){
 }
 
 fetchAPI(POPULAR_MOVIES);
+
+
+// ********* Searchbar Functionality ****************************************** //
+
+searchbar.onkeyup = function getMovie(e) {
+    if ((e.keyCode) && (searchbar.value)) { //while pressing key and if there is value run this func
+        e.preventDefault();// prevent refreshing page
+        const value = searchbar.value; // getting value
+        const newUrl = BASE_URL + value; // query which we want to search for
+        
+        console.log("Input value: ", value);
+
+        fetchAPI(newUrl); // fetch url with our input
+            
+    }
+    else if(e.keyCode) { //pressing but while there is no value, fetch url with popular movies
+        fetchAPI(POPULAR_MOVIES);
+    }
+};
 
 // ********* Movies Rendering Function ***************************************** //
 
