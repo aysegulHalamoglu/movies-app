@@ -138,3 +138,35 @@ main{
 	color: #999999;
     height: 20px;
 }
+
+/****************************/
+
+/* while width is under 460px this style is considered*/
+
+@media screen and (max-width:410px){
+    header{
+        justify-content: center;   
+    }
+    #searchbar-container{
+        padding:0;
+    }
+    main{
+        padding: 4rem;
+        padding-top: 0;
+    }
+    
+	.movie {
+		margin-bottom: 3px;
+	}
+    .tooltip .text{
+        font-size: 9px;
+        width: 80px;
+    }
+    .movie-name{
+        font-size: 9px;
+    }
+    .movie-vote{
+        font-size: 9px;
+    }
+
+}
