@@ -87,8 +87,35 @@ main{
 .movie-name{
     font-size: 12px;
 }
+/********* Tooltip **************/
 
+.tooltip{ /* tooltip main position : displaying the full name when hover */
+    position: relative;
+}
 
+.tooltip .text{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+      /* Position the tooltip */
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: 1;
+}
+
+.tooltip .no-text{
+    visibility: hidden;
+}
+.tooltip:hover .text{
+    visibility: visible;
+}
+
+/****************************/
 .movie-vote{
     width: 20px;
     height:15px;
