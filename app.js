@@ -60,15 +60,15 @@ function showMovies(data) {
             "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png"} 
             alt="${title}">
             
-                <div class="top-info">
-                    <p class="movie-name tooltip">${title.length>=10?title.slice(0,10)+'...': title}
+                <div class="topInfo">
+                    <p class="movieName tooltip">${getShorten(title)}
                     <span class="${getTooltip(title)}">${title}</span>
                     </p>
-                    <p class="movie-vote ${changeColor(vote_average)}">${vote_average}</p> 
+                    <p class="movieVote ${changeColor(vote_average)}">${vote_average}</p> 
                 </div>
 
                 <div id="bottom-info">
-                    <p class="movie-year">${release_date.slice(0,4)}</p>
+                    <p class="movieYear">${release_date.slice(0,4)}</p>
                 </div>
         `
         // incase no movie picture , an url added  by ternary function  
@@ -93,4 +93,13 @@ function changeColor(vote) { // above 5, turn the color green
     if(vote>=5){ 
         return 'green';
     } else { return 'red'} // below 5,  turn the color red
+}
+
+// ********* Movie Name Shortening Function ***************************************** //
+
+//add ... to end
+function getShorten(text) {
+    if(text.length>=11) { // above 11,  assume class is text : display tooltip
+        return `${text.slice(0,10)}...`
+    } else { return `${text}`} // below 11,  assume class is no-text : hide tooltip
 }
