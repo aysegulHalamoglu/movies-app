@@ -16,3 +16,4 @@
 
 <img src="assets/web.PNG" width="500"/> 
 <img src="assets/phone.PNG" width="150"/> 
+<img src="assets/tooltip.PNG" width="150"/> 
