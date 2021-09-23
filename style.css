@@ -72,3 +72,38 @@ main{
    border-top-left-radius: 16px;
    border-top-right-radius: 16px;
 }
+
+/****************************/
+
+.top-info{
+    display:flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-weight: 500;
+    height: 20px;
+}
+
+
+.movie-name{
+    font-size: 12px;
+}
+
+
+.movie-vote{
+    width: 20px;
+    height:15px;
+    text-align: center;
+    background-color: #ebe7e783;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+/****************************/
+
+.movie-year{
+    padding: 0.5rem;
+    font-size: 12px;
+	font-weight: 400;
+	color: #999999;
+    height: 20px;
+}
