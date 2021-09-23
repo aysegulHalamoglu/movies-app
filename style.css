@@ -18,7 +18,7 @@ header{
     justify-content: end;   
 }
 
-#searchbar-container{
+#searchbarContainer{
     display: flex;
     justify-content: flex-end;
     padding-right: 9rem;;
@@ -42,7 +42,6 @@ header{
     -webkit-box-shadow: 0px 0px 2px #83b6d3;  
 }
 /***********MovieGallery*************/
-
 
 main{
     /* For responsive view */
@@ -79,7 +78,7 @@ main{
 
 /****************************/
 
-.top-info{
+.topInfo{
     display:flex;
     justify-content: space-between;
     padding: 0.5rem;
@@ -88,7 +87,7 @@ main{
 }
 
 
-.movie-name{
+.movieName{
     font-size: 12px;
 }
 /********* Tooltip **************/
@@ -120,7 +119,7 @@ main{
 }
 
 /****************************/
-.movie-vote{
+.movieVote{
     width: 20px;
     height:15px;
     text-align: center;
@@ -128,18 +127,18 @@ main{
     border-radius: 3px;
     font-size: 10px;
 }
-.movie-vote.green{
+.movieVote.green{
     color: green;
 }
 
-.movie-vote.red{
+.movieVote.red{
     color: red;
 }
 
 
 /****************************/
 
-.movie-year{
+.movieYear{
     padding: 0.5rem;
     font-size: 12px;
 	font-weight: 400;
@@ -155,7 +154,7 @@ main{
     header{
         justify-content: center;   
     }
-    #searchbar-container{
+    #searchbarContainer{
         padding:0;
     }
     main{
@@ -170,10 +169,10 @@ main{
         font-size: 9px;
         width: 80px;
     }
-    .movie-name{
+    .movieName{
         font-size: 9px;
     }
-    .movie-vote{
+    .movieVote{
         font-size: 9px;
     }
 
