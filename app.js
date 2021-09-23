@@ -64,7 +64,7 @@ function showMovies(data) {
                     <p class="movie-name tooltip">${title.length>=10?title.slice(0,10)+'...': title}
                     <span class="${getTooltip(title)}">${title}</span>
                     </p>
-                    <p class="movie-vote">${vote_average}</p> 
+                    <p class="movie-vote ${changeColor(vote_average)}">${vote_average}</p> 
                 </div>
 
                 <div id="bottom-info">
@@ -84,4 +84,13 @@ function getTooltip(text) {
     if(text.length>=10){ // above 10,  assume class is text : display tooltip
         return 'text';
     } else { return 'no-text'} // below 10,  assume class is no-text : hide tooltip
+}
+
+
+// ********* Vote Color(red/green) Change Function ***************************************** //
+
+function changeColor(vote) { // above 5, turn the color green
+    if(vote>=5){ 
+        return 'green';
+    } else { return 'red'} // below 5,  turn the color red
 }

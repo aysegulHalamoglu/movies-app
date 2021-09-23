@@ -128,6 +128,14 @@ main{
     border-radius: 3px;
     font-size: 10px;
 }
+.movie-vote.green{
+    color: green;
+}
+
+.movie-vote.red{
+    color: red;
+}
+
 
 /****************************/
 
