@@ -61,8 +61,8 @@ function showMovies(data) {
             alt="${title}">
             
                 <div class="top-info">
-                    <p class="movie-name">${title.length>=10?title.slice(0,10)+'...': title}
-                    <span >${title}</span>
+                    <p class="movie-name tooltip">${title.length>=10?title.slice(0,10)+'...': title}
+                    <span class="${getTooltip(title)}">${title}</span>
                     </p>
                     <p class="movie-vote">${vote_average}</p> 
                 </div>
@@ -76,4 +76,12 @@ function showMovies(data) {
         main.appendChild(movieElement);
         //movieElement is being sent to main element with this DOM method
     })
+}
+
+// ********* Displaying Tooltip Function ***************************************** //
+
+function getTooltip(text) {
+    if(text.length>=10){ // above 10,  assume class is text : display tooltip
+        return 'text';
+    } else { return 'no-text'} // below 10,  assume class is no-text : hide tooltip
 }
