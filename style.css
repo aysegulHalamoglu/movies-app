@@ -1,179 +1,220 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;  
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
 }
 
 /***********SearchBar*************/
 
-header{
-    padding: 25px;
-    display: flex;
-    justify-content: end;   
+header {
+  padding: 25px;
+  padding-right: 15rem;
 }
 
-#searchbarContainer{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 9rem;;
+#searchbarContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 9rem;
 }
 
-#searchbar{
-    width: 145px;
-    height: 28px;
-    padding: 7px 14px;
-    font-family: 'Roboto';
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 400;
-    outline: none;
-    color: #1f1e1e;
-    opacity: 0.6;
-    border: 1px solid #dedede;
-    border-radius: 50px;
-    box-shadow: 0px 0px 2px #83b6d3;
-    -moz-box-shadow: 0px 0px 2px #83b6d3;
-    -webkit-box-shadow: 0px 0px 2px #83b6d3;  
+#searchbar {
+  width: 145px;
+  height: 28px;
+  padding: 7px 14px;
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  outline: none;
+  color: #1f1e1e;
+  opacity: 0.6;
+  border: 1px solid #dedede;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px #83b6d3;
+  -moz-box-shadow: 0px 0px 2px #83b6d3;
+  -webkit-box-shadow: 0px 0px 2px #83b6d3;
 }
 /***********MovieGallery*************/
 
-main{
-    /* For responsive view */
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding: 7rem;
-   padding-top:0;
+main {
+  /* For responsive view */
+  margin: auto 15rem;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 7rem;
+  padding-top: 0;
+}
+/****************************/
+.movie {
+  width: 8rem;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #ffffff;
+  border-radius: 25px 25px 5px 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 2px #d6d8da;
+  -moz-box-shadow: 0px 0px 2px #d6d8da;
+  -webkit-box-shadow: 0px 0px 2px #d6d8da;
+  transition: transform 0.6s;
+}
+.movie:hover {
+  transform: translateY(5px); /* Animation */
+}
+
+.movie img {
+  width: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 /****************************/
-.movie{
-   width: 8rem;
-   margin: 0.5rem;
-   margin-bottom: 2rem;
-   border:1px solid #ffffff;
-   border-radius: 16px 16px 5px 5px ;
-   background-color: #ffffff;
-   box-shadow: 0px 0px 2px #d6d8da;
-   -moz-box-shadow: 0px 0px 2px #d6d8da;
-   -webkit-box-shadow: 0px 0px 2px #d6d8da;
-   transition: transform .6s;
-}
-.movie:hover{
-    transform: scale(1.05); /* Animation */
+
+.topInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-weight: 500;
+  height: 20px;
 }
 
-.movie img{
-   width: 100%;
-   height: 120px;;
-   border-top-left-radius: 16px;
-   border-top-right-radius: 16px;
-}
-
-/****************************/
-
-.topInfo{
-    display:flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    font-weight: 500;
-    height: 20px;
-}
-
-
-.movieName{
-    font-size: 12px;
+.movieName {
+  font-size: 13px;
 }
 /********* Tooltip **************/
 
-.tooltip{ /* tooltip main position : displaying the full name when hover */
-    position: relative;
+.tooltip {
+  /* tooltip main position : displaying the full name when hover */
+  position: relative;
 }
 
-.tooltip .text{
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-      /* Position the tooltip */
-    position: absolute;
-    left: 0;
-    top: 15px;
-    z-index: 1;
+.tooltip .text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  left: 0;
+  top: 15px;
+  z-index: 1;
 }
 
-.tooltip .no-text{
-    visibility: hidden;
+.tooltip .no-text {
+  visibility: hidden;
 }
-.tooltip:hover .text{
-    visibility: visible;
+.tooltip:hover .text {
+  visibility: visible;
 }
 
 /****************************/
-.movieVote{
-    width: 20px;
-    height:15px;
-    text-align: center;
-    background-color: #ebe7e783;
-    border-radius: 3px;
-    font-size: 10px;
+.movieVote {
+  width: 20px;
+  height: 15px;
+  text-align: center;
+  background-color: #ebe7e783;
+  border-radius: 3px;
+  font-size: 13px;
 }
-.movieVote.green{
-    color: green;
-}
-
-.movieVote.red{
-    color: red;
+.movieVote.green {
+  color: green;
 }
 
-
-/****************************/
-
-.movieYear{
-    padding: 0.5rem;
-    font-size: 12px;
-	font-weight: 400;
-	color: #999999;
-    height: 20px;
+.movieVote.red {
+  color: red;
 }
 
 /****************************/
 
-/* while width is under 460px this style is considered*/
+.movieYear {
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  height: 20px;
+}
 
-@media screen and (max-width:410px){
-    header{
-        justify-content: center;   
-    }
-    #searchbarContainer{
-        padding:0;
-    }
-    main{
-        padding: 4rem;
-        padding-top: 0;
-    }
-    
-	.movie {
-		margin-bottom: 3px;
-	}
-    .tooltip .text{
-        font-size: 9px;
-        width: 80px;
-    }
-    .movieName{
-        font-size: 9px;
-    }
-    .movieVote{
-        font-size: 9px;
-    }
+/****************************/
 
+/**** Go Up****/
+#goUp {
+  position: fixed;
+  bottom: 3%;
+  left: 74%;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+  text-align: center;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+}
+
+.up {
+  width: 5rem;
+  transition: transform 0.6s;
+}
+.up:hover {
+  transform: translateY(-1rem);
+}
+
+/* while width is under 1087px this style is considered*/
+
+@media screen and (max-width: 1145px) {
+  header {
+    padding: 0;
+  }
+  #searchbarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  main {
+    margin: auto 11rem;
+  }
+  .movie {
+    min-width: 8rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  header {
+    padding: 1rem;
+  }
+  #searchbarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  main {
+    margin: 0;
+    padding: 4rem;
+    padding-top: 0;
+  }
+  .movie {
+    margin-bottom: 1rem;
+    min-width: 10rem;
+  }
+  .movieName {
+    font-size: 15px;
+  }
+  .movieVote {
+    width: 23px;
+    height: 15px;
+    font-size: 15px;
+  }
+  .movieYear {
+    font-size: 15px;
+  }
 }
