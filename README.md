@@ -3,7 +3,7 @@
 :small_blue_diamond:It is a Movie Web app with searchbar functionality<br>
 :small_blue_diamond:Developped by AysegulH for Kodluyoruz Bootcamp Homework <br>
 
-#### Click demo to try it by yourself! :arrow_forward: [MovieApp](basic-movies-app.netlify.app)
+#### Click demo to try it by yourself! :arrow_forward: [MovieApp](https://basic-movies-app.netlify.app/)
 
 :small_blue_diamond: HTML5
 :small_blue_diamond: CSS3
